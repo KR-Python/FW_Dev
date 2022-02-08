@@ -9,19 +9,6 @@ from sqlalchemy import create_engine
 
 pd, gpd, GeoAccessor, GeoSeriesAccessor = None, None, None, None
 
-# postgres: Dict[str, str] = {
-#     'ODW_PROD': 'ccfpsql01.us.crowncastle.com;6237;odw',
-#     'ODW_DEV': 'devccfpsql01.us.crowncastle.com;2966;odw_dev',
-#     'ODW_UAT': 'testccfpsql01.us.crowncastle.com;1277;odw_test'
-# }
-#
-# user_creds: Dict[str, str] = {
-#     'cc_geo_private': 'W3$gbe&nftPe2',
-#     'cc_geo_public': 'Le7!xUn0wQc1T',
-#     'ccfodwadmin': 'RetUo45ka%dql'
-# }
-
-
 class ODW:
     """
     Helper class for initializing a psycopg2 connection object and optionally instantiating a cursor object.
@@ -169,6 +156,7 @@ class ODW:
         else:
             raise ValueError(f'Cursor name {name} not member of {list(self._server_cursors.keys())}')
 
+    # TODO refactor this mess
     @staticmethod
     def importDataFrameLib(lib_name):
 
