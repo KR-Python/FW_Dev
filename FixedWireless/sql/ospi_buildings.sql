@@ -1,0 +1,1 @@
+SELECT * FROM ospi.ne_dw_buildings
