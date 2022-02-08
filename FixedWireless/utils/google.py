@@ -2,7 +2,7 @@ import requests
 
 __all__ = ['get_min_clearance', 'get_elevation_path', 'param_df_template']
 
-API_KEY = 'AIzaSyAYCe6_mXItN6Lf6MsyPTPLL8zDiUOK7Os'
+API_KEY = ''
 
 
 def get_elevation_path(lat1, lon1, lat2, lon2, height, samples="200", sensor="false", debug=False):
